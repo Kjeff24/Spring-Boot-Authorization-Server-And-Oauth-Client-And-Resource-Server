@@ -15,8 +15,8 @@ public class SecurityConfig {
         var userBuilder = User.builder();
 
         UserDetails jeff = userBuilder
-                .username("kjeff")
-                .password("{noop}kjeff")
+                .username("user")
+                .password("{noop}password")
                 .roles("USER", "ADMIN")
                 .build();
         return new InMemoryUserDetailsManager(jeff);
